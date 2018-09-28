@@ -1,0 +1,64 @@
+html, body
+{
+    height: 100%;
+}
+body {
+    background-color: #FFFFFF;
+}
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
+}
+
+.main.container {
+    width: 58em;
+    margin-top: 6em;
+    min-height: 100%;
+    padding-top: 0em;
+    padding-right: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 3em;
+
+}
+.main.container .FooterPush{
+    height: 7em;
+}
+.centerlog {
+    display: block;
+    margin: auto;
+    height: 10rem;
+}
+.ui.search{
+    margin-top: 4em;
+}
+.ui.input{
+    text-align: center;
+    display: block;
+    margin: auto;
+
+}
+.ui.sbuttons{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 1em;
+}
+.ui.button{
+    margin-top: 1em;
+}
+.prompt{
+    width: 60em;
+}
+.ui.footer.segment {
+    clear: both; /* 清除浮动元素格式 */
+    position: relative;
+    margin-top: -7em; /* Footer 高度的负值 */
+    height: 7em;
+}
+.footer-inner{
+    text-align: center;
+}
+.ui.stables{
+    padding-top: 2em;
+
+}
+
