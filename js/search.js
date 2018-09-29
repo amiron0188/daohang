@@ -13,7 +13,7 @@ const sYingshi = document.getElementById("yingshi");
 const sWangpan = document.getElementById("wangpan");
 
 //doAction 搜索跳转方法
-let doAction= (p,n)=>{
+let doAction=  (p,n)=>{
     window.open(p+sInfor.value+n);
 }
 //拼接网址

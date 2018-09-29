@@ -5,7 +5,7 @@
     <meta name="description" content="Morey丨个人导航  简单实用的个人导航网页，收录几个够用的网站；可以实现多引擎搜索，如百度，谷歌，必应">
     <meta name="keywords" content="导航,简单实用的导航,多搜索引擎,谷歌,百度,必应,搜索，网盘，电影">
     <meta name="generator" content="Morey 丨 2018.09.27">
-    <link rel="shortcut icon" href="http://osts237pz.bkt.clouddn.com/logo.jpg">
+    <link rel="shortcut icon" href="img/icon-black.png">
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/m_dh.style.css">
     <title>Morey丨个人导航</title>
@@ -17,7 +17,7 @@
 <div class="ui inverted menu borderless">
     <div class="ui container">
         <span class="header item">
-            <img class="logo" src="img/icon-white.png" >
+            <img class="logo" src="img/icon-white.png">
             个人导航
         </span>
         <a href="http://ww.altf4.cn" class="item" target="_blank">Morey's blog</a>
@@ -28,17 +28,17 @@
     </div>
 <div class="ui main container">
     <img class="centerlog" src="img/icon-left-font-monochrome-black.png">
-     <form action="https://www.baidu.com/s" method="get" target="_blank">
+    <div id="killie" >
+    <form action="https://www.baidu.com/s" method="get" target="_blank">
     <div class="ui search">
         <div class="ui input">
 
-            <input id="search" name="wd" class="prompt" placeholder="搜点啥呢...填好了点下面👇，别让它晾着~" type="text" >
+            <input id="search" name="wd" class="prompt" placeholder="要搜点啥呢..." type="text" >
 
     </div>
 
 </div>
     </form>
-
     <div class="ui sbuttons">
         <button class="ui button" id="google" >
             谷歌
@@ -198,12 +198,12 @@
                 <td   align="center">网盘</td>
                 <td align="center"><a href="http://www.panc.cc/" target="_blank"  >胖次网盘</a></td>
                 <td align="center"><a href="http://www.quzhuanpan.com/" target="_blank"  >去转盘网</a></td>
-                <td align="center"><a href="" target="_blank"  >还没有网址</a></td>
-                <td align="center"><a href="" target="_blank"  >还没有网址</a></td>
+                <td align="center"><a  target="_blank"  > 还没有网址</a></td>
+                <td align="center"><a  target="_blank"  >  还没有网址 </a></td>
             </tr>
             <tbody>
             <tr>
-                <td   align="center">其他</td>
+                <td  align="center">其他</td>
                 <td align="center"><a href="http://www.zxcs8.com/" target="_blank"  >知轩藏书</a></td>
                 <td align="center"><a href="http://inoreader.com" target="_blank"  >RSS阅读</a></td>
                 <td align="center"><a href="http://share.dmhy.org/" target="_blank"  >動漫花園</a></td>
@@ -212,6 +212,7 @@
             </tbody>
         </table>
 
+    </div>
     </div>
     </div>
     <div class="FooterPush"></div>
@@ -224,7 +225,7 @@
         ©
         <span itemprop="copyrightYear">2018</span>
         <div class="ui inverted small horizontal link list">
-        <a href="http://so.altf4.cn/" class="item">Morey丨个人导航</a>
+        <a href="https://www.gotoss.cn/" class="item">Morey丨个人导航</a>
 
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="item" target="_blank" style="display: inline-block; vertical-align: middle; margin-left: 10px;"><img alt="知识共享许可协议" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg"></a>
         </div>
@@ -245,18 +246,10 @@
 <script src="js/semantic.min.js"></script>
 <!--搜索引擎-->
 <script src="js/search.js"></script>
+<!--劝退IE-->
+<script src="js/checkIE.js"></script>
 <!--引入不蒜子计数-->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!--百度统计-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?08782df572e5129fbac8da8687b7b420";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 <script type="text/javascript">var OriginTitile = document.title;
 var titleTime;
 document.addEventListener('visibilitychange',
