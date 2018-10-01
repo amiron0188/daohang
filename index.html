@@ -267,10 +267,10 @@ var titleTime;
 document.addEventListener('visibilitychange',
     function() {
         if (document.hidden) {
-            document.title = 'ヽ(●-`Д´-)ノ来搜点啥吧~' ;
+            document.title = '快来搜点啥吧~' ;
             clearTimeout(titleTime);
         } else {
-            document.title = '( • ̀ω•́ )✧你来了哈~ ' ;
+            document.title = '你来了哈~ ' ;
             titleTime = setTimeout(function() {
                     document.title = OriginTitile;
                 },
