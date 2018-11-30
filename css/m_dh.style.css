@@ -8,6 +8,13 @@ body {
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
+.ui.menu{
+    border-radius: 0rem;
+}
+
+.ui.definition.table td:nth-child(2) {
+    border-left: 0;
+}
 
 .main.container {
     width: 58em;

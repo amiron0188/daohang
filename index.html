@@ -10,45 +10,42 @@
     <link rel="stylesheet" href="css/m_dh.style.css">
     <title>Morey丨个人导航</title>
     <script src="js/jquery.min.js"></script>
-
 </head>
-<body >
+<body id="killie" >
 <!--使用了Semantic-UI进行美化-->
+
 <div class="ui inverted menu borderless">
     <div class="ui container">
         <span class="header item">
             <img class="logo" src="img/icon-white.png">
             个人导航
         </span>
-        <a href="http://ww.altf4.cn" class="item" target="_blank">Morey's blog</a>
-        <a class="ui item right floated">
+        <a href="https://www.gotoss.cn" class="item" target="_blank">Morey's blog</a>
+        <a class="ui item right floated" id="goDonate">
             赏一个
             </a>
+
         </div>
-    </div>
+</div>
+
 <div class="ui main container">
     <img class="centerlog" src="img/icon-left-font-monochrome-black.png">
-    <div id="killie" >
-    <form action="https://www.baidu.com/s" method="get" target="_blank">
     <div class="ui search">
         <div class="ui input">
-
-            <input id="search" name="wd" class="prompt" placeholder="搜点啥呢...填好了点下面👇，别让它晾着~" type="text" >
-
+            <input id="search" name="wd" class="prompt" placeholder="" type="text" autofocus="autofocus">
     </div>
-
 </div>
-    </form>
     <div class="ui sbuttons">
         <button class="ui button" id="google" >
             谷歌
         </button>
+       <button class="ui button" id="bing">
+            必应
+        </button>
     <button class="ui button" id="baidu" >
         百度
     </button>
-        <button class="ui button" id="bing">
-            必应
-        </button>
+       
         <button class="ui button" id="github">
             GitHub
         </button>
@@ -75,6 +72,12 @@
         </button>
         <button class="ui button" id="wangpan">
             网盘
+        </button>
+      <button class="ui button" id="bt">
+            BT
+        </button>
+        <button class="ui button" id="fanyi" >
+            翻译
         </button>
     </div>
     <div class="ui  two column grid stables ">
@@ -170,7 +173,7 @@
             </tr>
             <tbody>
             <tr>
-                <td   align="center">安卓</td>
+                <td  align="center">安卓</td>
                 <td align="center"><a href="https://www.coolapk.com/" target="_blank"  >酷安网</a></td>
                 <td align="center"><a href="https://apkpure.com/" target="_blank"  >APKPure</a></td>
                 <td align="center"><a href="https://forum.xda-developers.com/" target="_blank"  >XDA论坛</a></td>
@@ -201,7 +204,7 @@
                 <td align="center"><a href="http://www.panc.cc/" target="_blank"  >胖次网盘</a></td>
                 <td align="center"><a href="http://www.quzhuanpan.com/" target="_blank"  >去转盘网</a></td>
                  <td align="center"><a href="https://www.lanzou.com/" target="_blank"  >蓝奏云</a></td>
-                <td align="center"><a href="http://www.btbtt9.com/" target="_blank"  >BT之家</a></td>
+                <td align="center"><a href="http://www.415.net" target="_blank"  >BT之家</a></td>
             </tr>
             <tbody>
             <tr>
@@ -216,11 +219,9 @@
 
     </div>
     </div>
-    </div>
     <div class="FooterPush"></div>
 </div>
 
-</div>
 <div class="ui footer segment  inverted vertical">
    <div class="footer-inner" >
     <div class="copyright">
@@ -228,20 +229,21 @@
         <span itemprop="copyrightYear">2018</span>
         <div class="ui inverted small horizontal link list">
         <a href="https://www.gotoss.cn/" class="item">Morey丨个人导航</a>
-
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="item" target="_blank" style="display: inline-block; vertical-align: middle; margin-left: 10px;"><img alt="知识共享许可协议" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg"></a>
         </div>
     </div>
 
     <div class="powered-by">
-
              Powered by <div class="ui inverted small horizontal link list"> <a class="item" href="https://www.gotoss.cn">Morey</a></div>
         丨<span id="busuanzi_container_site_pv">访问量：<span id="busuanzi_value_site_pv"></span></span>
-
         </div>
 
+    </div>
 </div>
 
+
+<!-- 弹出二维码 -->
+<div id="donate">
 
 </div>
 </body>
@@ -258,8 +260,38 @@ var _hmt = _hmt || [];
 </script>
 <!--搜索引擎-->
 <script src="js/search.js"></script>
-<!--劝退IE-->
-<script src="js/checkIE.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#goDonate').click(function () {
+            $('.ui.modal').modal('show');
+        });
+
+    });
+    document.getElementById("donate").innerHTML=
+        "<div class=\"ui basic small modal \">" +
+        " <div class=\"content\">" +
+        "<div class=\"ui two cards\">" +
+        "<div class=\" card\"> " +
+        "<div class=\"image\">" +
+        "<img src=\"img/alipay.png\">" +
+        "</div>" +
+        "<div class=\"content \">" +
+        "<div class=\"center aligned header \">Alipay</div>" +
+        " </div>" +
+        "</div>" +
+        " <div class=\"card\">" +
+        "<div class=\"image\">" +
+        "<img src=\"img/wechatpay.png\"></div>" +
+        "<div class=\"content\"><a class=\"center aligned header\" >WeChatPay</a></div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "<div class=\"actions\">" +
+        "<div class=\"ui red basic cancel inverted button\">Back</div></div></div>";
+
+           
+</script>
 <!--引入不蒜子计数-->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script type="text/javascript">var OriginTitile = document.title;
@@ -276,5 +308,12 @@ document.addEventListener('visibilitychange',
                 },
                 2000);
         }
-    });</script>
+    });
+</script>
+    <!--劝退IE-->
+    <script src="js/checkIE.js"></script>
+<!-- 引入superplaceholder.js，实现input打字机效果 -->
+<script src="js/superplaceholder.js"></script>
+<script src="js/checkOs.js"></script>
+
 </html>
