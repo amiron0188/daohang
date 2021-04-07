@@ -6,6 +6,6 @@
 
 使用Semantic UI 实现网页美化。
 
-网址：[so.altf4.cn](https://so.altf4.cn)
+网址：[so.altf4.cn](https://amiron0188.github.io/daohang/)
 
 网站收录参考 [袅残烟の个人导航](http://so.pcwuyu.com/) 以及  [北邮人导航](http://byr.wiki/) ；
