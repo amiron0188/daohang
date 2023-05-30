@@ -16,21 +16,21 @@ const sFanyi = document.getElementById("fanyi");
 
 
 //isEmpty;
-let isEmpty =function (obj)  {
+let isEmpty = function (obj) {
     if (obj === null) return true;
     if (typeof obj === 'undefined') {
-      return true;
+        return true;
     }
     if (typeof obj === 'string') {
         let reg = new RegExp("^([ ]+)|([　]+)$");
         //判断有空格，如果有空格，删除左边空格；
-        if( reg.test(obj)){
-            obj=obj.replace(/(^\s*)/g,"");
+        if (reg.test(obj)) {
+            obj = obj.replace(/(^\s*)/g, "");
         }
 
-      if (obj === "") {
-        return true;
-      }
+        if (obj === "") {
+            return true;
+        }
 
 
     }
@@ -42,138 +42,161 @@ p：搜索网址前段
 n: 搜到网址后段
 h: 搜索首页
 */
-let doAction=function(p,n,s){
-    if(isEmpty(sInfor.value)){
+let doAction = function (p, n, s) {
+    if (isEmpty(sInfor.value)) {
         window.open(s);
-    }else{
-        window.open(p+sInfor.value+n);
+    } else {
+        window.open(p + sInfor.value + n);
     }
-    
+
 }
 
 //拼接网址
-let p='';
-let n='';
-let s=''
+let p = '';
+let n = '';
+let s = ''
+
+document.onkeydown = function (e) { // 回车提交表单
+    // 兼容FF和IE和Opera
+    var theEvent = window.event || e;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    if (code == 13) {
+        p = 'https://cn.bing.com/search?q=';
+        n = '&ensearch=1&FORM=BESBTB'
+        s = 'https://www4.bing.com/?scope=web&FORM=BESBTB';
+        doAction(p, n, s);
+    }
+
+}
+
+// 搜索按钮点击事件处理程序
+// searchButton.addEventListener('click', function() {
+//     p = 'https://cn.bing.com/search?q=';
+//     n = '&ensearch=1&FORM=BESBTB'
+//     s = 'https://www4.bing.com/?scope=web&FORM=BESBTB';
+//     doAction(p, n, s);
+// });
+
+// const button = document.querySelector('.input')
+// button.addEventListener('click', () => {
+//     console.log('被点击了');
+// });
+document.getElementById('searchBtn').addEventListener('click', function() {
+    p = 'https://cn.bing.com/search?q=';
+    n = '&ensearch=1&FORM=BESBTB'
+    s = 'https://www4.bing.com/?scope=web&FORM=BESBTB';
+    doAction(p, n, s);
+});
+
 
 //Google
-sGoogle.onclick=function(){
-      p="https://www.google.com/search?q=";
+sGoogle.onclick = function () {
+    p = "https://www.google.com/search?q=";
 
-    n="&gws_rd=cr&nfpr=1&newwindow=1&num=30";
+    n = "&gws_rd=cr&nfpr=1&newwindow=1&num=30";
 
-    s='https://www.google.com/webhp?gws_rd=cr&nfpr=1&newwindow=1&num=30';
-   doAction(p,n,s);
+    s = 'https://www.google.com/webhp?gws_rd=cr&nfpr=1&newwindow=1&num=30';
+    doAction(p, n, s);
 
 }
 
 //BaiDu
-sBaidu.onclick= function()  {
-    p="https://www.baidu.com/s?wd=";
-    doAction(p,'',p);
+sBaidu.onclick = function () {
+    p = "https://www.baidu.com/s?wd=";
+    doAction(p, '', p);
 };
-document.onkeydown = function (e) { // 回车提交表单
-    // 兼容FF和IE和Opera
-        var theEvent = window.event || e;
-        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
-        if (code == 13) {   
-          p='https://cn.bing.com/search?q=';
-    n='&ensearch=1&FORM=BESBTB'
-    s='https://www4.bing.com/?scope=web&FORM=BESBTB';
-                doAction(p,n,s);
-            };
-        }
-    
+
+
 //Bing
-sBing.onclick=function () {
-    p='https://cn.bing.com/search?q=';
-    n='&ensearch=1&FORM=BESBTB'
-    s='https://www4.bing.com/?scope=web&FORM=BESBTB';
-    doAction(p,n,s);
+sBing.onclick = function () {
+    p = 'https://cn.bing.com/search?q=';
+    n = '&ensearch=1&FORM=BESBTB'
+    s = 'https://www4.bing.com/?scope=web&FORM=BESBTB';
+    doAction(p, n, s);
 }
 
 //GitHub
-sGitHub.onclick= function () {
-    p='https://github.com/search?q=';
-    n='';
-    s='https://github.com'
-    doAction(p,n,s);
+sGitHub.onclick = function () {
+    p = 'https://github.com/search?q=';
+    n = '';
+    s = 'https://github.com'
+    doAction(p, n, s);
 }
 
 //Gitee
 sGitee.onclick = function () {
-    p='https://gitee.com/search?utf8=✓&search=';
-    n='';
-    s='https://gitee.com/'
-    doAction(p,n,s);
+    p = 'https://gitee.com/search?utf8=✓&search=';
+    n = '';
+    s = 'https://gitee.com/'
+    doAction(p, n, s);
 }
 
 //Zhihu
-sZhihu.onclick= function () {
-    p='https://www.zhihu.com/search?q=';
-    n='&type=content&utm_content=search_hot';
-    s='https://www.zhihu.com/'
-    doAction(p,n,s);
+sZhihu.onclick = function () {
+    p = 'https://www.zhihu.com/search?q=';
+    n = '&type=content&utm_content=search_hot';
+    s = 'https://www.zhihu.com/'
+    doAction(p, n, s);
 }
 //jd
 sJd.onclick = function () {
-    p='https://search.jd.com/Search?enc=utf-8&keyword=';
-    n='';
-    s='https://search.jd.com/'
-    doAction(p,n,s);
+    p = 'https://search.jd.com/Search?enc=utf-8&keyword=';
+    n = '';
+    s = 'https://search.jd.com/'
+    doAction(p, n, s);
 }
 //TaoBao
-sTaoBao.onclick =function () {
-    p='https://s.taobao.com/search?q=';
-    n='&taoke_type=1';
-    s='https://s.taobao.com/';
-    doAction(p,n,s);
+sTaoBao.onclick = function () {
+    p = 'https://s.taobao.com/search?q=';
+    n = '&taoke_type=1';
+    s = 'https://s.taobao.com/';
+    doAction(p, n, s);
 }
 
 //YouTube
-sYouTube.onclick =function () {
-    p='https://www.youtube.com/results?search_query=';
-    doAction(p,n,p);
+sYouTube.onclick = function () {
+    p = 'https://www.youtube.com/results?search_query=';
+    doAction(p, n, p);
 }
 
 //Bilibili
-sBilibili.onclick =function () {
-    p='https://search.bilibili.com/all?keyword=';
-    n='';
-    s='https://search.bilibili.com'
-    doAction(p,n,s);
+sBilibili.onclick = function () {
+    p = 'https://search.bilibili.com/all?keyword=';
+    n = '';
+    s = 'https://search.bilibili.com'
+    doAction(p, n, s);
 }
 
 //YingShi
 sYingshi.onclick = function () {
-    p='http://ifkdy.com/?q=';
-    n='&p=1';
-    s='http://ifkdy.com/';
-    doAction(p,n,s);
+    p = 'http://ifkdy.com/?q=';
+    n = '&p=1';
+    s = 'http://ifkdy.com/';
+    doAction(p, n, s);
 }
 
 //Wangpan
 sWangpan.onclick = function () {
-    p='http://www.panuso.com/s/';
-    n='.html';
-    s='http://www.panuso.com'
-    doAction(p,n,s);
+    p = 'http://www.panuso.com/s/';
+    n = '.html';
+    s = 'http://www.panuso.com'
+    doAction(p, n, s);
 }
 
 //BT
 sBt.onclick = function () {
-    p='https://www.bturl.cc/search/';
-    n='_ctime_1.html';
-    s='https://www.bturl.cc'
-    doAction(p,n,s);
+    p = 'https://www.bturl.cc/search/';
+    n = '_ctime_1.html';
+    s = 'https://www.bturl.cc'
+    doAction(p, n, s);
 }
 
 //翻译
-sFanyi.onclick = function (){
-    p='https://fanyi.baidu.com/#auto/zh/';
-    n='';
-    s='https://fanyi.baidu.com/';
-    doAction(p,n,s);
+sFanyi.onclick = function () {
+    p = 'https://fanyi.baidu.com/#auto/zh/';
+    n = '';
+    s = 'https://fanyi.baidu.com/';
+    doAction(p, n, s);
 }
 console.log("                                  ");
 console.log("   - 欢迎来到Morey的个人导航 -     ");
